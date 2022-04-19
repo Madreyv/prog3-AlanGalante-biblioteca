@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="490.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LivroController">
+   <children>
+      <VBox layoutY="42.0" prefHeight="327.0" prefWidth="239.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="42.0">
+         <children>
+            <ListView fx:id="ListItensLivros" onMouseClicked="#ListItensLivrosMouseClicked" prefHeight="366.0" prefWidth="239.0" />
+            <HBox alignment="CENTER" prefHeight="88.0" prefWidth="239.0">
+               <children>
+                  <Button fx:id="BtnNovo" mnemonicParsing="false" onAction="#btnIncluirAction" text="Novo" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="465.0" layoutY="42.0" prefHeight="257.0" prefWidth="341.0" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="37.0" prefWidth="175.0">
+               <children>
+                  <RadioButton fx:id="RDCopia" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#copiaRadioAction" text="Cópia" />
+               </children>
+            </VBox>
+            <HBox fx:id="HBoxLivros" layoutX="10.0" layoutY="158.0" prefHeight="37.0" prefWidth="341.0" visible="false">
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="102.0" text="Livros:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="CBOLivros" onAction="#CBOLivrosOnAction" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="341.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="110.0" text="ID : " textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TxtID" disable="true" editable="false" prefHeight="7.0" prefWidth="149.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="341.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="112.0" text="Titulo : " textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TxtTitulo" disable="true" prefHeight="7.0" prefWidth="149.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="47.0" prefHeight="37.0" prefWidth="341.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="20.0" prefWidth="112.0" text="Ano Publicação :" textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TxtAnoPublicacao" disable="true" prefHeight="7.0" prefWidth="149.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="HBoxAutores" layoutX="10.0" layoutY="195.0" prefHeight="37.0" prefWidth="341.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="102.0" text="Autores: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="CBOAutores" disable="true" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="121.0" prefHeight="37.0" prefWidth="341.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="102.0" text="Genero: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="CBOGeneros" disable="true" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="87.0" layoutY="-21.0" prefHeight="43.0" prefWidth="579.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Titulo" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="239.0" layoutY="299.0" prefHeight="70.0" prefWidth="341.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="BtnCadastrar" disable="true" mnemonicParsing="false" onAction="#btnCadastrasAction" text="Cadastrar">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="BtnCancelar" disable="true" mnemonicParsing="false" onAction="#BtnCancelarAction" text="Cancelar" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
